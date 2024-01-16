@@ -22,6 +22,11 @@ function addActivity() {
         showError("Weight is rejected❌")
         return
     }
+    else if(!(weightValue>1 && weightValue<100)){
+        showError("Weight is rejected❌")
+        return
+
+    }
 
     let table = document.getElementById("theTable")
 
@@ -100,17 +105,28 @@ function UpdateActivity(){
         showError("Activity name is rejected❌")
         return
     }
+   
 
     //validating weight field
     if (weight == "" || weight > 100 || weight < 1) {
         showError("Weight is rejected❌")
         return
     }
+    else if(!(weight>1 && weight<100)){
+        showError("Weight is rejected❌")
+        return
+
+    }
 
      //validating grade
      if (grade == "" || grade > 100 || grade < 0) {
         showError("Grade is Rejected❌")
         return
+    }
+    else if(!(grade>1 && grade<100)){
+        showError("Grade is rejected❌")
+        return
+
     }
     let row=document.getElementById(selActivity)
     row.innerHTML=`<td >${selActivity}</td> <td>${activity}</td>
@@ -136,11 +152,22 @@ function addGrade() {
         showError("Grade is Rejected")
         return
     }
+    else if(!(grade>1 && grade<100)){
+        showError("Grade is rejected❌")
+        return
+
+    }
+
     //validating activityNo
     if (activityNo > rowCount || activityNo <= 0) {
         showError("Activity No is rejected")
 
         return
+    }
+    else if(!(activityNo>1 && activityNo<rowCount)){
+        showError("Activity No is rejected❌")
+        return
+
     }
     let row = document.getElementById(activityNo).getElementsByTagName("td")[3]
     row.innerHTML = grade
