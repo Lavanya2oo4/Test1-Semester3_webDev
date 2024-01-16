@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1-Semester3</title>
+    <style>
+         table {
+          text-align:center;
+          margin-left: auto;
+          margin-right: auto;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                       'Lucida Grande', 'Lucida Sans Unicode',
+                        Geneva, Verdana, sans-serif;
+        }
+        input, button {
+          padding: 12px 20px;           margin: 8px 0;
+          display: inline-block;        border: 1px solid #ccc;
+          border-radius: 4px;           box-sizing: border-box;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                       'Lucida Grande', 'Lucida Sans Unicode',
+                        Geneva, Verdana, sans-serif;
+          align: center;
+         }
+    </style>
+</head>
+
+<body>
+
+    <div align="center">
+        <h1>Grade Calculator</h1>  
+         
+        <button onclick="addActivity()" id="addActivity">
+          Add Activity</button>
+  
+        <label for="activity">Activity</label>
+        <input type="text" id="activity" size="3">
+         
+        <label for="Weight">Weight</label>
+        <input type="text" id="Weight" size="3"><br>    
+  
+        <button onclick="addGrade()" id="addGrade">
+          Add Grade</button>
+  
+        <label for="grade">Grade</label>
+        <input type="text" id="grade" size="3"">
+  
+        <label for="activityNo">Activity no</label>
+        <input type="text" id="activityNo" size="3"><br>        
+     
+        <button onclick="deleteActivity()" id="deleteActivity">
+        Delete Activity </button>    
+  
+        <table border="2" id="theTable" style="width:70%">
+            <tr>
+                <th>No</th>
+                <th>Activity</th> <th>Weight</th>
+                <th>Grade</th> </tr>  
+            <tr>
+                <td>1</td> <td>Lab1</td>
+                <td>10</td> <td></td>
+            </tr>
+            <tr>
+                <td>2</td> <td>Lab2</td>
+                <td>20</td> <td></td>
+            </tr>
+            <tr>
+                <td>3</td> <td>Test1</td>
+                <td>30</td> <td></td>
+            </tr>
+            <tr>
+                <td>4</td> <td>Test2</td>
+                <td>40</td> <td></td>
+            </tr>
+        </table>
+       <p id="ERR" style="color:red;" >Error Message: </p>
+</body>
+<script src="script.js"></script>
+
+</html>
