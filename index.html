@@ -47,10 +47,19 @@
         <input type="text" id="grade" size="3"">
   
         <label for="activityNo">Activity no</label>
-        <input type="text" id="activityNo" size="3"><br>        
+        <input type="text" id="activityNo" size="3"><br>   
+        
+        <button onclick="UpdateActivity()" id="update">
+        Update Selected Activity </button>    <br>
      
-        <button onclick="deleteActivity()" id="deleteActivity">
-        Delete Activity </button>    
+        <button onclick="deleteActivityFromEnd()" id="deleteActivity_En">
+        Delete Last Activity </button>    <br>
+  
+        <button onclick="deleteActivityFromStart()" id="deleteActivity_St">
+        Delete First Activity </button>    
+
+        <button onclick="deleteActivitySelected()" id="deleteActivity_Sel">
+        Delete Selected Activity </button>    
   
         <table border="2" id="theTable" style="width:70%">
             <tr id="0">
