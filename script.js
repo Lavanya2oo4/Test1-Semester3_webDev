@@ -92,14 +92,35 @@ function UpdateActivity(){
         return
     }
     let activity=document.getElementById("activity").value
+
     let weight=document.getElementById("weight").value
     let grade=document.getElementById("grade").value
 
+    if (activity == "") {
+        showError("Activity name is rejected❌")
+        return
+    }
+
+    //validating weight field
+    if (weight == "" || weight > 100 || weight < 1) {
+        showError("Weight is rejected❌")
+        return
+    }
+
+     //validating grade
+     if (grade == "" || grade > 100 || grade < 0) {
+        showError("Grade is Rejected❌")
+        return
+    }
     let row=document.getElementById(selActivity)
     row.innerHTML=`<td >${selActivity}</td> <td>${activity}</td>
     <td>${weight}</td> <td class="grade">${grade}</td>`
 
-    
+     //making fields blank after adding data
+     document.getElementById("activity").value = ""
+     document.getElementById("weight").value = ""
+     document.getElementById("grade").value = ""
+     document.getElementById("selActivity").value = ""
 }
 
 
@@ -137,8 +158,10 @@ function addGrade() {
 //function to show error
 function showError(message) {
     let error = document.getElementById("ERR")
+    error.hidden=false
     error.append(message)
     setTimeout(() => {
         error.innerHTML = "Error Message: "
+        error.hidden=true
     }, 1000)
 }
